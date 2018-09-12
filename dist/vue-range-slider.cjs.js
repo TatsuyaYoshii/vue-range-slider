@@ -218,9 +218,9 @@ var RangeSlider = { render: function render() {
 
     if (this.value == null || isNaN(defaultValue)) {
       if (min > max) {
-        defaultValue = max;
+        defaultValue = min;
       } else {
-        defaultValue = max;
+        defaultValue = (min + max) / 2;
       }
     }
 
