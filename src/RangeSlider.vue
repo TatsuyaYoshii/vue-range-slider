@@ -149,8 +149,8 @@ export default {
 </script>
 
 <style lang="scss">
-$slider-height: 20px !default;
-$slider-width: 130px !default;
+// $slider-height: 20px !default;
+// $slider-width: 130px !default;
 $rail-height: 4px !default;
 $knob-size: 20px !default;
 
@@ -164,8 +164,10 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
 .range-slider {
   display: inline-block;
   padding: 0 ($knob-size / 2);
-  height: $slider-height;
-  width: $slider-width;
+  // height: $slider-height;
+  // width: $slider-width;
+  height: 40%;
+  width: 20%;
 }
 
 .range-slider.disabled {
@@ -205,12 +207,14 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   top: 50%;
   left: 0;
   box-sizing: border-box;
-  height: 60px;
-  width: $knob-size;
-  border: $knob-border;
+  //height: 60px;
+  height: 82.5%;
+  //width: $knob-size;
+  width: 5.6%;
+  //border: $knob-border;
   border-radius: 2px;
   background-color: $knob-color;
-  box-shadow: $knob-shadow;
+  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.25);
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
