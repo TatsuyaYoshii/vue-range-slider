@@ -221,11 +221,11 @@ var RangeSlider = { render: function render() {
     var defaultValue = Number(this.value);
 
     if (this.value == null || isNaN(defaultValue)) {
-      // if (min > max) {
-      //   defaultValue = min
-      // } else {
-      defaultValue = (min + max) / 2;
-      // }
+      if (min > max) {
+        defaultValue = min;
+      } else {
+        defaultValue = max;
+      }
     }
 
     this.actualValue = this.round(defaultValue);
