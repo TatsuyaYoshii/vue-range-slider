@@ -57,11 +57,11 @@ export default {
     let defaultValue = Number(this.value)
 
     if (this.value == null || isNaN(defaultValue)) {
-      if (min > max) {
-        defaultValue = min
-      } else {
+      // if (min > max) {
+      //   defaultValue = min
+      // } else {
         defaultValue = (min + max) / 2
-      }
+      // }
     }
 
     this.actualValue = this.round(defaultValue)
@@ -114,6 +114,7 @@ export default {
       const { offsetWidth } = this.$refs.inner
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth))
       this.emitInput(this.actualValue)
+      console.log("drag")
     },
 
     dragEnd (event: Event, offset: { left: number, top: number }) {
@@ -166,8 +167,8 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   padding: 0 ($knob-size / 2);
   // height: $slider-height;
   // width: $slider-width;
-  height: 40%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
 }
 
 .range-slider.disabled {

@@ -217,11 +217,11 @@ var RangeSlider = { render: function render() {
     var defaultValue = Number(this.value);
 
     if (this.value == null || isNaN(defaultValue)) {
-      if (min > max) {
-        defaultValue = min;
-      } else {
-        defaultValue = (min + max) / 2;
-      }
+      // if (min > max) {
+      //   defaultValue = min
+      // } else {
+      defaultValue = (min + max) / 2;
+      // }
     }
 
     this.actualValue = this.round(defaultValue);
@@ -272,6 +272,7 @@ var RangeSlider = { render: function render() {
 
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth));
       this.emitInput(this.actualValue);
+      console.log("drag");
     },
     dragEnd: function dragEnd(event, offset) {
       var offsetWidth = this.$refs.inner.offsetWidth;
