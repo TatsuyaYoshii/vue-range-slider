@@ -154,9 +154,9 @@ $slider-width: 130px !default;
 $rail-height: 4px !default;
 $knob-size: 20px !default;
 
-$rail-color: #e2e2e2 !default;
-$rail-fill-color: #21fb92 !default;
-$knob-color: #fff !default;
+$rail-color: #D8D8D8 !default;
+//$rail-fill-color: #21fb92 !default;
+$knob-color: #2476BC !default;
 
 $knob-border: 1px solid #f5f5f5 !default;
 $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
@@ -205,10 +205,10 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   top: 50%;
   left: 0;
   box-sizing: border-box;
-  height: $knob-size;
+  height: 60px;
   width: $knob-size;
   border: $knob-border;
-  border-radius: 50%;
+  border-radius: 2px;
   background-color: $knob-color;
   box-shadow: $knob-shadow;
   transform: translate(-50%, -50%);
