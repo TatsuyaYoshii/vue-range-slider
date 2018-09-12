@@ -58,7 +58,7 @@ export default {
 
     if (this.value == null || isNaN(defaultValue)) {
       if (min > max) {
-        defaultValue = min
+        defaultValue = max
       } else {
         defaultValue = max
       }
