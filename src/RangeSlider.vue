@@ -155,7 +155,7 @@ $rail-height: 4px !default;
 $knob-size: 20px !default;
 
 $rail-color: #D8D8D8 !default;
-//$rail-fill-color: #21fb92 !default;
+$rail-fill-color: rgba(0, 0, 0, 0) !default;
 $knob-color: #2476BC !default;
 
 $knob-border: 1px solid #f5f5f5 !default;
