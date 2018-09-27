@@ -155,7 +155,7 @@ export default {
 $rail-height: 4px !default;
 $knob-size: 20px !default;
 
-$rail-color: #D8D8D8 !default;
+$rail-color: #979797 !default;
 $rail-fill-color: rgba(0, 0, 0, 0) !default;
 $knob-color: #2476BC !default;
 
