@@ -226,7 +226,7 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
 
 .right-controller .range-slider-knob .oval-knob-image{
   width: 100%;
-  border-radius: 50%;
+  border-radius: 100%;
   box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
 }
 
