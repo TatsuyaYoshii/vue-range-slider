@@ -180,7 +180,7 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   display: inline-block;
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 81%;
 }
 
 .range-slider-rail,
@@ -212,11 +212,11 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   //height: 60px;
   height: 40%;
   //width: $knob-size;
-  width: 12.3%;
+  width: 11%;
   //border: $knob-border;
   border-radius: 50%;
   background-color: $knob-color;
-  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.25);
+  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
