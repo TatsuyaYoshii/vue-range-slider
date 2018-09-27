@@ -150,6 +150,7 @@
 
 
 
+
 // $slider-height: 20px !default;
 // $slider-width: 130px !default;
 $rail-height: 4px !default;
@@ -210,16 +211,21 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   left: 0;
   box-sizing: border-box;
   //height: 60px;
-  height: 40%;
+  //height: 40%;
   //width: $knob-size;
   width: 12%;
   //border: $knob-border;
-  border-radius: 50%;
+  //border-radius: 50%;
   background-color: $knob-color;
-  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+
+.right-controller .range-slider-knob .oval-knob-image{
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
+}
+
 
 .right-controller .range-slider-hidden {
   display: none;

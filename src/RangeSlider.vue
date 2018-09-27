@@ -11,6 +11,7 @@
         <span class="range-slider-fill" :style="{ width: valuePercent + '%' }"></span>
         <span class="range-slider-knob" ref="knob" :style="{ left: valuePercent + '%' }">
           <slot name="knob"></slot>
+          <img class="oval-knob-image" src="https://s3-ap-northeast-1.amazonaws.com/labelweb/vue-range-slider/ovalKnob.png">
         </span>
       </span>
     </drag-helper>
@@ -210,16 +211,21 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   left: 0;
   box-sizing: border-box;
   //height: 60px;
-  height: 40%;
+  //height: 40%;
   //width: $knob-size;
   width: 12%;
   //border: $knob-border;
-  border-radius: 50%;
+  //border-radius: 50%;
   background-color: $knob-color;
-  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
+
+.right-controller .range-slider-knob .oval-knob-image{
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
+}
+
 
 .right-controller .range-slider-hidden {
   display: none;
