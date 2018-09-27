@@ -164,7 +164,8 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
 
 .range-slider {
   display: inline-block;
-  padding: 0 ($knob-size / 2);
+  //padding: 0 ($knob-size / 2);
+  padding: 0px;
   // height: $slider-height;
   // width: $slider-width;
   height: 100%;
@@ -209,11 +210,11 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   left: 0;
   box-sizing: border-box;
   //height: 60px;
-  height: 82.5%;
+  height: 40%;
   //width: $knob-size;
-  width: 5.6%;
+  width: 12.3%;
   //border: $knob-border;
-  border-radius: 2px;
+  border-radius: 50%;
   background-color: $knob-color;
   box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.25);
   transform: translate(-50%, -50%);
