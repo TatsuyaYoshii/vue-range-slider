@@ -276,7 +276,7 @@ var RangeSlider = { render: function render() {
 
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth));
       this.emitInput(this.actualValue);
-      console.log("drag");
+      //console.log("drag")
     },
     dragEnd: function dragEnd(event, offset) {
       var offsetWidth = this.$refs.inner.offsetWidth;

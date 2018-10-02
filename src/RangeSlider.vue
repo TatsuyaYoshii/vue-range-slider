@@ -115,7 +115,7 @@ export default {
       const { offsetWidth } = this.$refs.inner
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth))
       this.emitInput(this.actualValue)
-      console.log("drag")
+      //console.log("drag")
     },
 
     dragEnd (event: Event, offset: { left: number, top: number }) {
