@@ -180,8 +180,9 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
 .right-controller .range-slider-inner {
   display: inline-block;
   position: relative;
+  top: -5%; //本来いらない
   height: 100%;
-  width: 78%; //本来は81が正しい
+  width: 68%; //本来は81が正しい
 }
 
 .right-controller .range-slider-rail,
