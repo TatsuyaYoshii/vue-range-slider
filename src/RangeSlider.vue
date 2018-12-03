@@ -9,7 +9,7 @@
         <input class="range-slider-hidden" type="text" :name="name" :value="actualValue" :disabled="disabled">
         <span class="range-slider-rail"></span>
         <span class="range-slider-fill" :style="{ width: valuePercent + '%' }"></span>
-        <span class="range-slider-knob" ref="knob" :style="{ left: valuePercent + '%', background: barColor }">
+        <span class="range-slider-knob" ref="knob" :style="{ left: valuePercent + '%', background: _barColor }">
           <slot name="knob"></slot>
         </span>
       </span>
