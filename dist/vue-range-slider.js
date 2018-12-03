@@ -207,7 +207,7 @@ var RangeSlider = { render: function render() {
       default: 1
     },
     barColor: {
-      type: string,
+      type: String,
       default: "#2476BC"
     }
   },
