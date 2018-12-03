@@ -9,9 +9,8 @@
         <input class="range-slider-hidden" type="text" :name="name" :value="actualValue" :disabled="disabled">
         <span class="range-slider-rail"></span>
         <span class="range-slider-fill" :style="{ width: valuePercent + '%' }"></span>
-        <span class="range-slider-knob" ref="knob" :style="{ left: valuePercent + '%' }">
+        <span class="range-slider-knob" ref="knob" :style="{ left: valuePercent + '%', background: barColor }">
           <slot name="knob"></slot>
-          <img class="oval-knob-image" src="https://s3-ap-northeast-1.amazonaws.com/labelweb/vue-range-slider/ovalKnob.svg">
         </span>
       </span>
     </drag-helper>
@@ -43,6 +42,10 @@ export default {
     step: {
       type: [String, Number],
       default: 1
+    },
+    barColor: {
+        type: string,
+        default: "#2476BC"
     }
   },
 
@@ -83,6 +86,11 @@ export default {
 
     valuePercent () {
       return (this.actualValue - this._min) / (this._max - this._min) * 100
+    },
+
+    _barColor () {
+
+        return this.barColor;
     }
   },
 
@@ -115,7 +123,7 @@ export default {
       const { offsetWidth } = this.$refs.inner
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth))
       this.emitInput(this.actualValue)
-      //console.log("drag")
+      // console.log("drag")
     },
 
     dragEnd (event: Event, offset: { left: number, top: number }) {
@@ -156,37 +164,36 @@ export default {
 $rail-height: 4px !default;
 $knob-size: 20px !default;
 
-$rail-color: #979797 !default;
+$rail-color: #D8D8D8 !default;
 $rail-fill-color: rgba(0, 0, 0, 0) !default;
 $knob-color: #2476BC !default;
 
 $knob-border: 1px solid #f5f5f5 !default;
 $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
 
-.right-controller .range-slider {
+
+.top-controller .range-slider {
   display: inline-block;
-  //padding: 0 ($knob-size / 2);
-  padding: 0px;
+  padding: 0 ($knob-size / 2);
   // height: $slider-height;
   // width: $slider-width;
   height: 100%;
   width: 100%;
 }
 
-.right-controller .range-slider.disabled {
+.top-controller .range-slider.disabled {
   opacity: 0.5;
 }
 
-.right-controller .range-slider-inner {
+.top-controller .range-slider-inner {
   display: inline-block;
   position: relative;
-  top: -5%; //本来いらない
   height: 100%;
-  width: 68%; //本来は81が正しい
+  width: 100%;
 }
 
-.right-controller .range-slider-rail,
-.right-controller .range-slider-fill {
+.top-controller .range-slider-rail,
+.top-controller .range-slider-fill {
   display: block;
   position: absolute;
   top: 50%;
@@ -196,44 +203,34 @@ $knob-shadow: 1px 1px rgba(0, 0, 0, 0.2) !default;
   transform: translateY(-50%);
 }
 
-.right-controller .range-slider-rail {
+.top-controller .range-slider-rail {
   width: 100%;
   background-color: $rail-color;
 }
 
-.right-controller .right-controller .range-slider-fill {
+.top-controller .range-slider-fill {
   background-color: $rail-fill-color;
 }
 
-.right-controller .range-slider-knob {
+.top-controller .range-slider-knob {
   display: block;
   position: absolute;
   top: 50%;
   left: 0;
   box-sizing: border-box;
   //height: 60px;
-  //height: 40%;
+  height: 82.5%;
   //width: $knob-size;
-  width: 12%;
-  height: 100%;
+  width: 5.6%;
   //border: $knob-border;
-  //border-radius: 50%;
-  //background-color: $knob-color;
+  border-radius: 2px;
+  background-color: $knob-color;
+  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.25);
   transform: translate(-50%, -50%);
-  display: flex;
-	align-items: center;
   cursor: pointer;
 }
 
-.right-controller .range-slider-knob .oval-knob-image{
-  width: 100%;
-  border-radius: 100%;
-  box-shadow: 0px 2px 4px 0px rgba(1, 1, 1, 0.5);
-  background-color: #2476BC;
-}
-
-
-.right-controller .range-slider-hidden {
+.top-controller .range-slider-hidden {
   display: none;
 }
 </style>
