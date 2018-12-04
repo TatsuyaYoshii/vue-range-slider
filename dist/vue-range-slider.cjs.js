@@ -181,7 +181,7 @@ var DragHelper = {
 };
 
 var RangeSlider = { render: function render() {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('span', { staticClass: "range-slider", class: { disabled: _vm.disabled } }, [_c('drag-helper', { attrs: { "disabled": _vm.disabled }, on: { "dragstart": _vm.dragStart, "drag": _vm.drag, "dragend": _vm.dragEnd } }, [_c('span', { ref: "inner", staticClass: "range-slider-inner" }, [_c('input', { staticClass: "range-slider-hidden", attrs: { "type": "text", "name": _vm.name, "disabled": _vm.disabled }, domProps: { "value": _vm.actualValue } }), _vm._v(" "), _c('span', { staticClass: "range-slider-rail" }), _vm._v(" "), _c('span', { staticClass: "range-slider-fill", style: { width: _vm.valuePercent + '%' } }), _vm._v(" "), _c('span', { ref: "knob", staticClass: "range-slider-knob", style: { left: _vm.valuePercent + '%', background: _vm._barColor } }, [_vm._t("knob")], 2)])])], 1);
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('span', { staticClass: "range-slider", class: { disabled: _vm.disabled } }, [_c('drag-helper', { attrs: { "disabled": _vm.disabled }, on: { "dragstart": _vm.dragStart, "drag": _vm.drag, "dragend": _vm.dragEnd } }, [_c('span', { ref: "inner", staticClass: "range-slider-inner" }, [_c('input', { staticClass: "range-slider-hidden", attrs: { "type": "text", "name": _vm.name, "disabled": _vm.disabled }, domProps: { "value": _vm.actualValue } }), _vm._v(" "), _c('span', { staticClass: "range-slider-rail" }), _vm._v(" "), _c('span', { staticClass: "range-slider-fill", style: { width: _vm.valuePercent + '%' } }), _vm._v(" "), _c('span', { ref: "knob", staticClass: "range-slider-knob", style: { left: _vm.valuePercent + '%' } }, [_vm._t("knob"), _vm._v(" "), _c('div', { staticClass: "oval-knob-image", style: { backgroundColor: _vm._barColor } })], 2)])])], 1);
   }, staticRenderFns: [],
   props: {
     name: String,
@@ -246,7 +246,6 @@ var RangeSlider = { render: function render() {
       return (this.actualValue - this._min) / (this._max - this._min) * 100;
     },
     _barColor: function _barColor() {
-
       return this.barColor;
     }
   },
@@ -280,7 +279,7 @@ var RangeSlider = { render: function render() {
 
       this.actualValue = this.round(this.valueFromBounds(offset.left, offsetWidth));
       this.emitInput(this.actualValue);
-      // console.log("drag")
+      //console.log("drag")
     },
     dragEnd: function dragEnd(event, offset) {
       var offsetWidth = this.$refs.inner.offsetWidth;
